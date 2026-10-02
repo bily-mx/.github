@@ -1,0 +1,63 @@
+# Bily
+
+**Technology for modern fiscal operations.**
+
+Somos una organización de tecnología enfocada en construir soluciones que simplifican procesos fiscales, financieros y operativos mediante software, automatización e integración.
+
+Nuestro equipo combina experiencia en **desarrollo de software, infraestructura, facturación electrónica, integración de sistemas y regulación fiscal mexicana** para desarrollar productos confiables, escalables y orientados a resolver problemas reales.
+
+## What we build
+
+Trabajamos principalmente en:
+
+- Software para procesos fiscales y administrativos
+- Facturación electrónica y CFDI
+- Automatización de procesos
+- APIs e integraciones
+- Procesamiento y análisis de datos
+- Servicios cloud
+- Herramientas internas de ingeniería
+- Integraciones con plataformas empresariales
+
+## Engineering at Bily
+
+Buscamos construir software que sea:
+
+**Simple. Reliable. Scalable. Maintainable.**
+
+Nos interesa resolver problemas complejos sin trasladar esa complejidad al usuario.
+
+Nuestro trabajo abarca desde arquitectura y backend hasta interfaces, APIs, procesamiento de grandes volúmenes de información, automatización e infraestructura.
+
+## Technology
+
+Nuestro ecosistema tecnológico incluye herramientas y servicios como:
+
+`C#` · `.NET` · `SQL Server` · `Azure` · `REST APIs` · `Git` · `JavaScript` · `Cloud Services`
+
+La tecnología cambia constantemente, por lo que mantenemos una cultura de mejora continua, experimentación y evolución de nuestras prácticas de ingeniería.
+
+## How we work
+
+Creemos en:
+
+- Resolver antes que complicar
+- Automatizar procesos repetitivos
+- Diseñar pensando en escalabilidad
+- Mantener código entendible y mantenible
+- Medir antes de optimizar
+- Compartir conocimiento dentro del equipo
+- Mejorar continuamente productos y procesos
+
+## Our repositories
+
+Esta organización contiene proyectos, librerías, herramientas internas, integraciones y componentes desarrollados por el equipo de **Bily**.
+
+Algunos repositorios son privados debido a la naturaleza de nuestros productos y servicios.
+
+---
+
+**Bily**  
+Software · Fiscal Technology · Automation · Cloud
+
+[https://bily.mx](https://bily.mx)
