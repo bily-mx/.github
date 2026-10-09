@@ -10,7 +10,7 @@ Asana es la fuente principal para planeación, prioridad, responsables y seguimi
 
 La rama principal de los repositorios es `main`.
 
-`main` está protegida y no se utiliza como rama de desarrollo.
+`main` está protegida por política y no se utiliza como rama de desarrollo.
 
 Todo cambio destinado a `main` debe ingresar mediante un Pull Request aprobado.
 
