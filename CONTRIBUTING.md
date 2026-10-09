@@ -1,4 +1,4 @@
-# Estándar de trabajo con GitHub en Profact
+# Estándar de trabajo con GitHub en Profact 
 
 ## 1. Propósito
 
