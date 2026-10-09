@@ -196,7 +196,7 @@ El mensaje final del squash debe conservar el identificador de Asana y describir
 
 Después de integrar:
 
-- la rama remota debe eliminarse;
+- la rama remota debe eliminarse (configurado como política del repositorio);
 - el developer debe actualizar su `main` local;
 - la rama local debe eliminarse cuando ya no sea necesaria;
 - la tarea de Asana debe avanzar al estado que corresponda al proceso de QA, despliegue o cierre.
@@ -262,7 +262,7 @@ Desarrollar y hacer commits
   ↓
 Publicar rama
   ↓
-Pull Request / Draft
+Pull Request o Draft
   ↓
 Ready for review
   ↓
