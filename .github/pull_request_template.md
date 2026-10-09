@@ -1,6 +1,6 @@
 ## Asana
 
-<!-- ID y/o enlace de la tarea -->
+<!-- ID y enlace de la tarea -->
 -
 
 ## Qué cambia

@@ -1,4 +1,4 @@
-# Estándar de trabajo con GitHub en Profact 
+# Estándar de trabajo con GitHub en Profact
 
 ## 1. Propósito
 
@@ -6,13 +6,13 @@ Este documento define el flujo esperado para los repositorios de Profact.
 
 Asana es la fuente principal para planeación, prioridad, responsables y seguimiento funcional. GitHub es la fuente principal para código, ramas, Pull Requests, revisión e historial técnico.
 
+Antes de trabajar en cualquier repositorio de Profact, cada colaborador debe completar el proceso descrito en [`ONBOARDING.md`](./ONBOARDING.md).
+
 ## 2. Rama principal
 
-La rama principal de los repositorios es `main`.
+La rama principal es `main`.
 
-`main` está protegida por política y no se utiliza como rama de desarrollo.
-
-Todo cambio destinado a `main` debe ingresar mediante un Pull Request aprobado.
+`main` está protegida por política y no se utiliza como rama de desarrollo. Todo cambio destinado a `main` debe ingresar mediante un Pull Request aprobado.
 
 ## 3. Inicio de trabajo
 
@@ -46,7 +46,7 @@ refactor/ABC-789-mejora-servicio
 hotfix/ABC-999-error-produccion
 ```
 
-No se reutilizan ramas que ya hayan sido integradas.
+No se reutilizan ramas integradas. Evitar espacios, acentos, `ñ` y caracteres especiales.
 
 ## 4. Commits
 
@@ -74,13 +74,13 @@ ahora si
 
 Los commits de la rama son visibles durante la revisión del Pull Request.
 
-Profact utiliza **Squash merge**, por lo que al integrar el Pull Request a `main` sus commits se consolidan en un único commit lógico. Los commits originales siguen formando parte del contexto e historial del Pull Request, pero no se incorporan individualmente al historial de `main`.
+Profact utiliza **Squash merge**, por lo que al integrar el Pull Request a `main` sus commits se consolidan en un único commit lógico. Los commits originales permanecen como contexto del Pull Request, pero no se incorporan individualmente al historial de `main`.
 
 ## 5. Publicación de la rama
 
-La rama debe publicarse en el repositorio remoto cuando exista trabajo que deba respaldarse, compartirse o revisarse.
+La rama debe publicarse cuando exista trabajo que deba respaldarse, compartirse o revisarse.
 
-Una vez publicada, el developer continuará realizando sus pushes sobre la misma rama mientras el Pull Request permanezca abierto.
+Mientras el Pull Request permanezca abierto, cualquier corrección o ajuste solicitado debe realizarse sobre la misma rama y publicarse nuevamente.
 
 ## 6. Pull Request
 
@@ -92,7 +92,7 @@ Formato de título:
 [ID-ASANA] Descripción breve
 ```
 
-El Pull Request debe utilizar la plantilla oficial de Profact.
+El Pull Request debe utilizar la plantilla oficial de Profact configurada.
 
 El developer es responsable de:
 
@@ -106,24 +106,17 @@ El developer es responsable de:
 
 ## 7. Draft Pull Request
 
-Un Pull Request normal significa que el cambio está listo para revisión.
+Un Pull Request normal indica que el cambio está listo para revisión formal.
 
-Un **Draft Pull Request** se utiliza cuando el trabajo todavía no está terminado pero se desea:
+Un **Draft Pull Request** se utiliza cuando el trabajo todavía no está terminado pero se desea dar visibilidad temprana, solicitar retroalimentación o discutir una solución antes de concluirla.
 
-- dar visibilidad temprana;
-- solicitar retroalimentación;
-- mostrar avance;
-- discutir una solución antes de concluirla.
-
-Un Draft no se considera listo para aprobación ni integración.
-
-Cuando el developer termina el trabajo, debe cambiarlo a **Ready for review**.
+Un Draft no se considera listo para aprobación ni integración. Cuando el developer termina el trabajo, debe cambiarlo a **Ready for review**.
 
 ## 8. Reviewer
 
-El reviewer debe ser una persona distinta del autor del cambio.
+El reviewer será una persona distinta del autor por política.
 
-Su responsabilidad es revisar, según corresponda:
+Debe revisar, según corresponda:
 
 - comportamiento esperado;
 - impacto funcional;
@@ -135,12 +128,7 @@ Su responsabilidad es revisar, según corresponda:
 - pruebas o validaciones realizadas;
 - alcance declarado en Asana y en el Pull Request.
 
-El reviewer puede:
-
-- comentar;
-- sugerir cambios;
-- solicitar modificaciones;
-- aprobar.
+Puede comentar, sugerir cambios, solicitar modificaciones o aprobar.
 
 ## 9. Aprobación
 
@@ -148,10 +136,8 @@ Los Pull Requests requieren al menos una aprobación válida.
 
 Además, el ruleset exige que el **último push revisable** haya sido aprobado por una persona distinta de quien realizó ese push.
 
-Estas reglas cubren situaciones diferentes:
-
-- **Required approvals** asegura que exista el número mínimo de aprobaciones.
-- **Approval of the most recent reviewable push** evita que un cambio aprobado reciba nuevos commits y sea integrado sin que alguien distinto revise esos últimos cambios.
+- **Required approvals** asegura el número mínimo de aprobaciones.
+- **Approval of the most recent reviewable push** evita que un PR aprobado reciba nuevos commits y sea integrado sin revisar esos últimos cambios.
 
 Las aprobaciones anteriores pueden invalidarse cuando se agregan nuevos commits.
 
@@ -159,21 +145,15 @@ Las aprobaciones anteriores pueden invalidarse cuando se agregan nuevos commits.
 
 Los comentarios sobre líneas o secciones del Pull Request generan conversaciones.
 
-Una conversación debe marcarse como resuelta únicamente cuando:
-
-- el cambio solicitado fue atendido;
-- la duda fue aclarada; o
-- reviewer y developer acordaron que no se requiere modificación.
+Una conversación debe marcarse como resuelta únicamente cuando el cambio solicitado fue atendido, la duda fue aclarada o reviewer y developer acordaron que no se requiere modificación.
 
 Todas las conversaciones requeridas deben estar resueltas antes del merge.
 
 ## 11. Conflictos con `main`
 
-Si GitHub detecta conflictos entre la rama de trabajo y `main`, el developer es responsable de resolverlos antes del merge.
+Si GitHub detecta conflictos entre la rama de trabajo y `main`, el developer debe resolverlos antes del merge.
 
-Los conflictos simples pueden resolverse en GitHub.
-
-Para cambios de código relevantes, se recomienda resolverlos localmente sobre la rama de trabajo, incorporar la versión actual de `main`, validar el resultado y publicar nuevamente la rama.
+Los conflictos simples pueden resolverse en GitHub. Para cambios de código relevantes, se recomienda resolverlos localmente sobre la rama de trabajo, incorporar la versión actual de `main`, validar el resultado y publicar nuevamente la rama.
 
 Nunca se resuelven conflictos modificando directamente `main`.
 
@@ -196,12 +176,12 @@ El mensaje final del squash debe conservar el identificador de Asana y describir
 
 Después de integrar:
 
-- la rama remota debe eliminarse (configurado como política del repositorio);
+- la rama remota debe eliminarse (configurado por política);
 - el developer debe actualizar su `main` local;
 - la rama local debe eliminarse cuando ya no sea necesaria;
-- la tarea de Asana debe avanzar al estado que corresponda al proceso de QA, despliegue o cierre.
+- la tarea de Asana debe avanzar al estado que corresponda.
 
-Una rama integrada no se reutiliza para una nueva tarea.
+Una rama integrada no se reutiliza.
 
 ## 14. Hotfix
 
@@ -209,47 +189,27 @@ Una urgencia no elimina el flujo de revisión.
 
 Los hotfix parten de `main`, se desarrollan en una rama `hotfix/...` y deben ingresar mediante Pull Request.
 
-El bypass de protecciones queda reservado para situaciones excepcionales y para los actores expresamente autorizados.
+El bypass queda reservado para situaciones excepcionales y actores autorizados.
 
-## 15. Autenticación
+## 15. Autenticación y acceso
 
-El método estándar de acceso a los repositorios de Profact es **SSH**.
+El método estándar de acceso a repositorios Profact es **SSH**.
 
-Cada developer debe:
+Cada developer debe completar el proceso de alta, identidad Git y configuración SSH descrito en [`ONBOARDING.md`](./ONBOARDING.md).
 
-- utilizar su propia cuenta de GitHub;
-- utilizar su propia llave SSH;
-- proteger su llave privada;
-- registrar únicamente la llave pública en GitHub;
-- evitar compartir llaves, tokens o credenciales.
-
-Los repositorios deben clonarse utilizando la URL SSH.
-
-La configuración técnica de SSH se documenta en `SSH_SETUP.md`.
+No se comparten llaves privadas, tokens ni credenciales.
 
 ## 16. Información sensible
 
-No se almacenan en Git:
-
-- contraseñas;
-- API keys;
-- tokens;
-- certificados privados;
-- llaves privadas;
-- connection strings productivas;
-- secretos de infraestructura.
-
-Los secretos deben permanecer en los mecanismos de configuración segura definidos para cada solución.
+No se almacenan en Git contraseñas, API keys, tokens, certificados privados, llaves privadas, connection strings productivas ni secretos de infraestructura.
 
 ## 17. Automatización
 
 El flujo podrá complementarse con CI/CD.
 
-**CI (Continuous Integration)** valida automáticamente cambios, por ejemplo mediante build, pruebas y análisis.
+**CI** valida automáticamente cambios mediante build, pruebas y análisis.
 
-**CD (Continuous Delivery/Deployment)** automatiza etapas posteriores a la integración, como empaquetado y despliegue a ambientes.
-
-Estas automatizaciones no reemplazan el flujo de ramas, Pull Requests y revisión definido en este documento.
+**CD** automatiza etapas posteriores a la integración, como empaquetado y despliegue.
 
 ## 18. Flujo resumido
 
@@ -262,7 +222,7 @@ Desarrollar y hacer commits
   ↓
 Publicar rama
   ↓
-Pull Request o Draft
+Pull Request / Draft
   ↓
 Ready for review
   ↓
